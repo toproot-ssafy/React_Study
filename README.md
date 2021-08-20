@@ -1,5 +1,5 @@
 # React_Study
 
-# Ch1. React Getting Started
+## Ch1. React Getting Started
 
-# ch2. React Component
+## ch2. React Component
