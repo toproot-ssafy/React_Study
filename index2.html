@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactcreateElement로 컴포넌트 만들기</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    
+    // 1. 태그 이름 문자열 type
+    // <h1></h1>
+    // ReactDOM.render(
+    //   React.createElement("h1", null, `type이 "태그이름 문자열" 입니다.`),
+    //   document.querySelector("#root")
+    // );
+
+    //2. 리액트 컴포넌트 type
+    //const Component = () => {
+    //  return React.createElement(
+    //    "p",
+    //    null,
+    //    `type이 "React 컴포넌트" 입니다.`
+    //  );
+    //};
+
+    // <Component />
+    // 컴포넌트를 사용하면 재사용성이 높아질듯!
+    // ReactDOM.render(
+    //  React.createElement(Component, null, null),
+    //  document.querySelector("#root")
+    //);
+
+    // 3. React.Fragment
+    // id가 root인 div태그안에 어떤 태그없이 최상위에 위치할 수 있음.
+    //ReactDOM.render(
+    // React.createElement(
+    //    React.Fragment,
+    //    null,
+    //    `type이 "React Fragment" 입니다.`,
+    //    `type이 "React Fragment" 입니다.`,
+    //    `type이 "React Fragment" 입니다.`
+    //  ),
+    //  document.querySelector("#root")
+    //);
+
+    // 4. 복잡한 리액트 엘리먼트 모임
+    ReactDOM.render(
+      <div>
+        <div>
+          <h1>주제</h1>
+          <ul>
+            <li>React</li>
+            <li>Vue</li>
+          </ul>
+        </div>
+      </div>,
+      document.querySelector("#root")
+    )
+
+  </script>
+</body>
+</html>
