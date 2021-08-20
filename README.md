@@ -8,8 +8,6 @@
 
 
 
-
-
 ## ch2. React Component
 
 > 8/20 학습
