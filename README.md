@@ -15,3 +15,7 @@
 - funcition, class component 생성
 - JSX를 활용한 DOM render
 - props와 state 
+
+> 8/31 학습
+
+- react Component Lifecycle(1)
