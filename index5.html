@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeCycle</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    console.log(React);
+    console.log(ReactDOM);
+
+    class App extends React.Component {
+      state ={
+        age: 39,
+      };
+      interval = null;
+      constructor(props) { // initializaion 1
+        super(props);
+
+        console.log('constructor', props);
+      }
+      render() {
+        console.log('render');
+        return ( // mount 3 , state가 변경되면 다시 갱신되므로 맨 마지막으로 실행.
+          <div>
+            <h2>Hello {this.props.name} - {this.state.age} </h2>
+          </div>
+        );
+      }
+      componentWillMount() {
+        console.log('componentWillMount'); // 2
+      }
+      componentDidMount() {
+        console.log('componentDidlMount'); // 4
+
+        this.interval = setInterval(() => {
+          // console.log("setInerval");
+          this.setState(state => ({...state, age: state.age + 1}));
+        }, 1000);
+      }
+
+      componentWillReceiveProps(nextProps) { // 바뀔 props를 받아서 처리
+        console.log("componentWillReceiveProps", nextProps);
+      }
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate', nextProps, nextState);
+
+        return true; // 여기서 false를 해주면 다시 렌더하지 않겠다는 뜻 (값은 변하나 화면에 보이지는 않음!)
+      }
+      componentWillUpdate(nextProps, nextState) {
+        console.log('componentWillUpdate', nextProps, nextState);
+      }
+      componentDidUpdate(prevProps, prevState) {
+        console.log('componentDidUpdate', prevProps, prevState);
+      }
+      componentWillUnmount() {
+        // setInterval을 끝내주기.
+        // interval을 가져오기 위해서 전역 변수화 해주기.
+        clearInterval(this.interval);
+      }
+    }
+
+    ReactDOM.render(<App name="Mark" />, document.querySelector("#root"));
+
+  </script>
+</body>
+</html>
