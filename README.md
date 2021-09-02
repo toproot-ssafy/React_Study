@@ -8,7 +8,7 @@
 
 
 
-## ch2. React Component
+## Ch2. React Component
 
 > 8/20 학습
 
@@ -23,4 +23,8 @@
 > 09/01 학습
 
 - react Component Lifecycle(2)
+
+
+
+## Ch3. Creating React Project
 
