@@ -28,3 +28,7 @@
 
 ## Ch3. Creating React Project
 
+- eslint
+- prettier
+- husky
+- 리액트 컴포넌트 디버깅
