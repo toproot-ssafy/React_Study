@@ -1,7 +1,7 @@
 import queryString from "query-string";
 
 export default function About(props) {
-  console.log(props);
+  //console.log(props);
   const searchParams = props.location.search;
   console.log(searchParams);
   // const obj = new URLSearchParams(searchParams);

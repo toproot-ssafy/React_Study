@@ -35,3 +35,8 @@
 
 
 
+## Ch4. React Router
+
+> 9/6일 학습
+
+- dynamic router
