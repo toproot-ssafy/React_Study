@@ -40,3 +40,16 @@
 > 9/6일 학습
 
 - dynamic router
+- Switch, Notfound
+- JSX링크 라우팅
+- JS fkdnxld
+- redirect
+
+
+
+## Ch5. React Component Styling
+
+- Style Loader
+
+
+
