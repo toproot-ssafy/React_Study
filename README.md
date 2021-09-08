@@ -54,3 +54,4 @@
 - CSS, Sass
 - css module, sass module
 
+- styled components
