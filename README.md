@@ -56,3 +56,7 @@
 
 - styled components
 
+> 9/10일 학습
+
+- styled component (2)
+
