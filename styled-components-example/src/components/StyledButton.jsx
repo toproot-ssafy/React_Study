@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 // 스타일이 먹여진 버튼으로 적용
 const StyledButton = styled.button`
@@ -9,6 +9,13 @@ const StyledButton = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
   font-size: 20px;
+
+  ${(props) =>
+    props.primary &&
+    css`
+      background: palevioletred;
+      color: white;
+    `}
 `;
 
 export default StyledButton;
