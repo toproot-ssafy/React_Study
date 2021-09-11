@@ -67,3 +67,13 @@
 ## Ch6. 리액트 실전활용
 
 - HOC(High Order Component)
+
+- Controlled component & UnControlled component
+
+
+
+## Ch 7. Hooks & Context
+
+> 9/11 학습
+
+- Basic hooks
