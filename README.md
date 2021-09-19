@@ -31,7 +31,7 @@
 - eslint
 - prettier
 - husky
-- 리액트 컴포넌트 디버깅
+- 리액트 컴포넌트 디버깅 
 
 
 
