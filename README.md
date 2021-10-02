@@ -54,7 +54,7 @@
 - CSS, Sass
 - css module, sass module
 
-- styled components
+- styled components. 
 
 > 9/10일 학습
 
